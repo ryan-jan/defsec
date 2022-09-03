@@ -112,6 +112,7 @@ func (a *adapter) adaptProjectMembers() {
 				project: iam.Project{
 					Metadata:          defsecTypes.NewUnmanagedMetadata(),
 					AutoCreateNetwork: defsecTypes.BoolDefault(false, defsecTypes.NewUnmanagedMetadata()),
+					ApiKeys:           nil,
 					Members:           []iam.Member{member},
 					Bindings:          nil,
 				},
@@ -211,6 +212,7 @@ func (a *adapter) adaptProjectDataBindings() {
 			project: iam.Project{
 				Metadata:          defsecTypes.NewUnmanagedMetadata(),
 				AutoCreateNetwork: defsecTypes.BoolDefault(false, defsecTypes.NewUnmanagedMetadata()),
+				ApiKeys:           nil,
 				Members:           nil,
 				Bindings:          bindings,
 			},
@@ -278,6 +280,7 @@ func (a *adapter) adaptProjectBindings() {
 				project: iam.Project{
 					Metadata:          defsecTypes.NewUnmanagedMetadata(),
 					AutoCreateNetwork: defsecTypes.BoolDefault(false, defsecTypes.NewUnmanagedMetadata()),
+					ApiKeys:           nil,
 					Members:           nil,
 					Bindings:          []iam.Binding{binding},
 				},

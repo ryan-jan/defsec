@@ -27,6 +27,7 @@ func (a *adapter) Adapt() iam.IAM {
 	a.adaptFolderIAM()
 	a.adaptProjects()
 	a.adaptProjectIAM()
+	a.adaptProjectApiKeys()
 	return a.merge()
 }
 

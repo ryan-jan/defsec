@@ -27,8 +27,40 @@ type Folder struct {
 type Project struct {
 	defsecTypes.Metadata
 	AutoCreateNetwork defsecTypes.BoolValue
+	ApiKeys           []ApiKey
 	Members           []Member
 	Bindings          []Binding
+}
+
+type ApiKey struct {
+	defsecTypes.Metadata
+	Name         defsecTypes.StringValue
+	Restrictions []interface{}
+}
+
+type ApiKeyApiTargets struct {
+	defsecTypes.Metadata
+	Service defsecTypes.StringValue
+}
+
+type ApiKeyAndroidKeyRestrictions struct {
+	defsecTypes.Metadata
+	AllowedApplications []defsecTypes.StringValue
+}
+
+type ApiKeyBrowserKeyRestrictions struct {
+	defsecTypes.Metadata
+	AllowedReferrers []defsecTypes.StringValue
+}
+
+type ApiKeyIosKeyRestrictions struct {
+	defsecTypes.Metadata
+	AllowedBundleIds []defsecTypes.StringValue
+}
+
+type ApiKeyServerKeyRestrictions struct {
+	defsecTypes.Metadata
+	AllowedIps []defsecTypes.StringValue
 }
 
 type Binding struct {
