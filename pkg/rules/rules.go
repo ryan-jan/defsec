@@ -56,6 +56,7 @@ import (
 	_ "github.com/aquasecurity/defsec/internal/rules/github/repositories"
 	_ "github.com/aquasecurity/defsec/internal/rules/google/bigquery"
 	_ "github.com/aquasecurity/defsec/internal/rules/google/compute"
+	_ "github.com/aquasecurity/defsec/internal/rules/google/dataproc"
 	_ "github.com/aquasecurity/defsec/internal/rules/google/dns"
 	_ "github.com/aquasecurity/defsec/internal/rules/google/gke"
 	_ "github.com/aquasecurity/defsec/internal/rules/google/iam"

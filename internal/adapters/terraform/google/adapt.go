@@ -3,6 +3,7 @@ package google
 import (
 	"github.com/aquasecurity/defsec/internal/adapters/terraform/google/bigquery"
 	"github.com/aquasecurity/defsec/internal/adapters/terraform/google/compute"
+	"github.com/aquasecurity/defsec/internal/adapters/terraform/google/dataproc"
 	"github.com/aquasecurity/defsec/internal/adapters/terraform/google/dns"
 	"github.com/aquasecurity/defsec/internal/adapters/terraform/google/gke"
 	"github.com/aquasecurity/defsec/internal/adapters/terraform/google/iam"
@@ -17,6 +18,7 @@ func Adapt(modules terraform.Modules) google.Google {
 	return google.Google{
 		BigQuery: bigquery.Adapt(modules),
 		Compute:  compute.Adapt(modules),
+		Dataproc: dataproc.Adapt(modules),
 		DNS:      dns.Adapt(modules),
 		GKE:      gke.Adapt(modules),
 		KMS:      kms.Adapt(modules),

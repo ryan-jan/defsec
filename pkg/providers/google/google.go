@@ -3,6 +3,7 @@ package google
 import (
 	"github.com/aquasecurity/defsec/pkg/providers/google/bigquery"
 	"github.com/aquasecurity/defsec/pkg/providers/google/compute"
+	"github.com/aquasecurity/defsec/pkg/providers/google/dataproc"
 	"github.com/aquasecurity/defsec/pkg/providers/google/dns"
 	"github.com/aquasecurity/defsec/pkg/providers/google/gke"
 	"github.com/aquasecurity/defsec/pkg/providers/google/iam"
@@ -14,6 +15,7 @@ import (
 type Google struct {
 	BigQuery bigquery.BigQuery
 	Compute  compute.Compute
+	Dataproc dataproc.Dataproc
 	DNS      dns.DNS
 	GKE      gke.GKE
 	KMS      kms.KMS
